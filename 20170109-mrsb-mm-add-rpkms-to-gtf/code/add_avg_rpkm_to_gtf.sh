@@ -3,6 +3,7 @@
 # Joe Troy 12/11/2016 - Created
 # Joe Troy 12/13/2016 - add simple report (in bed format) with just RPKM for A30C, FC30C and H30C
 # Joe Troy 01/24/2017 - fixed H gtf input GTF_IN=/home/jmtroy2/jmt/projects/20170109-mrsb-mm-add-rpkms-to-gtf/project_input_data/H30C-combined-gtf/contained.combined.gtf
+# Joe Troy 04/27/2017 - added to github, created new code folder, and changed to use rabt cuffcompare output
 
 #
 # Create RPKM counts from cuffcompare .gtf files and add back to .gtf file
@@ -21,7 +22,7 @@ module load homer
 # set variable to HOMER's bin folder - needed to run HOMER programs
 HOMERBIN=/home/apps/homer/homer-4.7/bin
 
-OUTPUT_DATA_FOLDER=/home/jmtroy2/jmt/projects/20170109-mrsb-mm-add-rpkms-to-gtf/output
+OUTPUT_DATA_FOLDER=/home/jmtroy2/jmt/projects/20170109-mrsb-mm-add-rpkms-to-gtf/rabt_output
 # remove and recreate output data folder
 if [ -d "$OUTPUT_DATA_FOLDER" ]
 then
@@ -42,7 +43,7 @@ TMP_DATA="$OUTPUT_DATA_FOLDER"/tmp_data.txt
 # Process Amygdala 30 minute control un-annotated exons
 # define .gtf input
 #
-GTF_IN=/home/jmtroy2/jmt/projects/20170109-mrsb-mm-add-rpkms-to-gtf/project_input_data/A30C-combined-gtf/contained.combined.gtf
+GTF_IN=/home/jmtroy2/jmt/projects/20170109-mrsb-mm-add-rpkms-to-gtf/project_input_data/A30C-combined-gtf/contained.combined.gtf_from_cufflinks_rabt/contained.combined.gtf
 
 # defile tag directories
 T1=/home/jmtroy2/jmt/projects/20161207-temp-mrsb-homer-tag-dirs/mmA30C1_tags
