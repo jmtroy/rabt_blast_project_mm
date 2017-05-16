@@ -22,7 +22,7 @@ module load homer
 # set variable to HOMER's bin folder - needed to run HOMER programs
 HOMERBIN=/home/apps/homer/homer-4.7/bin
 
-OUTPUT_DATA_FOLDER=/home/jmtroy2/jmt/projects/20170109-mrsb-mm-add-rpkms-to-gtf/rabt_output
+OUTPUT_DATA_FOLDER=/home/jmtroy2/jmt/projects/20170109-mrsb-mm-add-rpkms-to-gtf/rabt_pooled_output
 # remove and recreate output data folder
 if [ -d "$OUTPUT_DATA_FOLDER" ]
 then
@@ -43,7 +43,7 @@ TMP_DATA="$OUTPUT_DATA_FOLDER"/tmp_data.txt
 # Process Amygdala 30 minute control un-annotated exons
 # define .gtf input
 #
-GTF_IN=/home/jmtroy2/jmt/projects/20170109-mrsb-mm-add-rpkms-to-gtf/project_input_data/A30C-combined-gtf/contained.combined.gtf_from_cufflinks_rabt/contained.combined.gtf
+GTF_IN=/home/jmtroy2/jmt/projects/20170109-mrsb-mm-add-rpkms-to-gtf/rabt_pooled_input/A30C-combined-gtf/contained.combined.gtf
 
 # defile tag directories
 T1=/home/jmtroy2/jmt/projects/20161207-temp-mrsb-homer-tag-dirs/mmA30C1_tags
@@ -87,7 +87,7 @@ paste $SORTED_GTF $TMP2 > $RPKM_FILE
 # Process Frontal Cortex 30 minute control un-annotated exons
 # define .gtf input
 #
-GTF_IN=/home/jmtroy2/jmt/projects/20170109-mrsb-mm-add-rpkms-to-gtf/project_input_data/FC30C-combined-gtf/contained.combined.gtf
+GTF_IN=/home/jmtroy2/jmt/projects/20170109-mrsb-mm-add-rpkms-to-gtf/rabt_pooled_input/FC30C-combined-gtf/FC30_cuffcompare_contained.combined.gtf
 
 # defile tag directories
 T1=/home/jmtroy2/jmt/projects/20161207-temp-mrsb-homer-tag-dirs/mmFC30C1_tags
@@ -131,7 +131,7 @@ paste $SORTED_GTF $TMP2 > $RPKM_FILE
 # Process Hypothalamus 30 minute control un-annotated exons
 # define .gtf input
 #
-GTF_IN=/home/jmtroy2/jmt/projects/20170109-mrsb-mm-add-rpkms-to-gtf/project_input_data/H30C-combined-gtf/contained.combined.gtf
+GTF_IN=/home/jmtroy2/jmt/projects/20170109-mrsb-mm-add-rpkms-to-gtf/rabt_pooled_input/H30C-combined-gtf/H30_cuffcompare_contained.combined.gtf
 
 # defile tag directories
 T2=/home/jmtroy2/jmt/projects/20161207-temp-mrsb-homer-tag-dirs/mmH30C2_tags
